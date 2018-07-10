@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            label {
+                display: block;
+            }
+            input[type=checkbox] + label {
+                display: inline;
+            }
+            section {
+                margin-bottom: 2em;
+            }
+            textarea {
+                width: 100%;
+                height: 5em;
+            }
+
+            label > span {
+                color: darkgray;
+                font-size: 90%;
+                display: block;
+            }
+
+            #status {
+                color: darkgray;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <input type="checkbox" id="showPreviews" />
+            <label for="showPreviews">
+                Rich previews
+                <span>Rich previews contain photo of the comment author and comment preview.<br>This feature disables Teamwox own notifications and extension's notification counter.</span>
+            </label>
+        </section>
+
+        <section>
+            <label for="twHost">Teamwox host:</label>
+            <input type="text" id="twHost" />
+        </section>
+
+        <section>
+            <label for="tracked">
+                Tracked items:<br>
+                <span>Task/Servicedesk URL, one per line</span>
+            </label>
+            <textarea id="tracked"></textarea>
+        </section>
+
+        <section>
+            <button id="save">Save</button>
+        </section>
+        <div id="status">Loading...</div>
+    </body>
+    <script src="options.js"></script>
+</html>
